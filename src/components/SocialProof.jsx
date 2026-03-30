@@ -20,13 +20,11 @@ const SocialProof = () => {
               }`}
             >
               <div className="flex items-center gap-2">
-                {/* সংখ্যাগুলো এখন সম্পূর্ণ সাদা */}
                 <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
                   {stat.value}
                 </h2>
 
               </div>
-                    {/* লেবেলগুলো হালকা সাদা (indigo-100) যাতে দেখতে ভালো লাগে */}
                     <p className="mt-2 text-indigo-100 font-medium text-lg uppercase tracking-wide">
                     {stat.label}
                     </p>
