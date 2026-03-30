@@ -37,7 +37,7 @@ const Header = () => {
               {/* Watch Demo with Play.png icon */}
               <button className="w-full sm:w-auto bg-white border-2 border-gray-100 hover:border-gray-200 text-gray-700 px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-95">
                 <img 
-                  src="/src/assets/Play.png" 
+                  src="/assets/Play.png"
                   alt="Play" 
                   className="w-5 h-5 object-contain"
                   onError={(e) => { e.target.onerror = null; e.target.src = "https://cdn-icons-png.flaticon.com/512/0/375.png" }} 
@@ -53,7 +53,7 @@ const Header = () => {
             <div className="absolute -top-20 -right-20 w-80 h-80 bg-indigo-200 rounded-full blur-[100px] opacity-30"></div>
             
             <img
-              src="/src/assets/banner.png"
+              src="/assets/banner.png"
               alt="Digital Workflow"
               className="relative w-full max-w-xl lg:max-w-none h-auto object-contain animate-fade-in"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x500/eef2ff/4f46e5?text=Banner+Image" }}
