@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
+import Header from './components/Header'; // ব্যানার কম্পোনেন্ট ইম্পোর্ট করা হলো
 
 function App() {
-  // গ্লোবাল স্টেট হিসেবে cartCount রাখছি, পরে এখানে Cart Array রাখবো
   const [cartItems, setCartItems] = useState([]);
 
   return (
     <div className="min-h-screen bg-[#F9FAFB] font-sans text-gray-900">
       
-      {/* Navbar Section */}
+      {/* Top Navigation */}
       <Navbar cartCount={cartItems.length} />
       
-      {/* Main Content Area */}
       <main>
-        <div className="text-center mt-20">
-          <h1 className="text-2xl font-bold text-gray-500">
-            Empty
-          </h1>
-        </div>
+        {/* Header / Banner Section */}
+        <Header />
+        
+        {/* পরবর্তী সেকশনগুলো আমরা এখানে বসাবো */}
       </main>
 
     </div>
