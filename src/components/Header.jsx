@@ -55,7 +55,7 @@ const Header = () => {
             <img
               src="/src/assets/banner.png"
               alt="Digital Workflow"
-              className="relative w-full max-w-xl lg:max-w-none h-auto object-contain drop-shadow-2xl animate-fade-in"
+              className="relative w-full max-w-xl lg:max-w-none h-auto object-contain animate-fade-in"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x500/eef2ff/4f46e5?text=Banner+Image" }}
             />
           </div>
