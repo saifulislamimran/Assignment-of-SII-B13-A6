@@ -5,6 +5,7 @@ import SocialProof from './components/SocialProof';
 import ShopSection from './components/ShopSection';
 import HowItWorks from './components/HowItWorks';
 import Pricing from './components/Pricing';
+import CtaSection from './components/CtaSection';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,6 +22,7 @@ function App() {
         <ShopSection cartItems={cartItems} setCartItems={setCartItems} />
         <HowItWorks />
         <Pricing />
+        <CtaSection />
       </main>
       
       <ToastContainer position="bottom-right" autoClose={2000} />
