@@ -1,5 +1,33 @@
-# Vue 3 + Vite
+# 🚀 DigiTools - Premium Digital Workflow Solution
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### A powerful and sleek landing page for digital tools, designed to help creators and professionals work smarter, not harder.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## 🛠 Technology Stack
+
+This project is built using modern web technologies to ensure speed, scalability, and a premium user experience:
+
+* **React.js** (Frontend Framework)
+* **Tailwind CSS** (Utility-first Styling)
+* **Vite** (Fast Build Tool)
+* **React Toastify** (Interactive Notifications)
+* **Lucide React / FontAwesome** (Iconography)
+
+---
+
+## ✨ Key Features
+
+### 1. Dynamic Product & Cart System
+An interactive shop section where users can toggle between a premium product grid and a real-time cart. It features instant "Add to Cart" validation and automated price calculations.
+
+### 2. Seamless User Experience (UX)
+Smooth scrolling navigation across all sections (Features, Pricing, FAQ) and an interactive 3-step guide to get users started in minutes.
+
+### 3. Professional Pricing & CTA
+A transparent, multi-tier pricing model with a highlighted "Most Popular" plan and a high-conversion "Call to Action" section to drive user engagement.
+
+---
+
+## 📄 License
+This project is part of the **Programming Hero** Assignment (B13-A6). Developed with ❤️ by **Saiful Islam Imran**.

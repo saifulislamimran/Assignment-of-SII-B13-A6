@@ -40,6 +40,7 @@ function App() {
           <CtaSection />
         </div>
       </main>
+      
       <Footer />
       
       <ToastContainer position="bottom-right" autoClose={2000} />
