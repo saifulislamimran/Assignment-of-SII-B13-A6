@@ -17,18 +17,18 @@ const Navbar = ({ cartCount }) => {
 
           {/* Middle: Desktop Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-900 font-medium hover:text-[#4F39F6] transition-colors">Products</a>
-            <a href="#" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">Features</a>
-            <a href="#" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">Pricing</a>
-            <a href="#" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">Testimonials</a>
-            <a href="#" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">FAQ</a>
+            <a href="#products" className="text-gray-900 font-medium hover:text-[#4F39F6] transition-colors">Products</a>
+            <a href="#features" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">Features</a>
+            <a href="#pricing" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">Pricing</a>
+            <a href="#testimonials" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">Testimonials</a>
+            <a href="#faq" className="text-gray-500 font-medium hover:text-gray-900 transition-colors">FAQ</a>
           </div>
 
           {/* Right: Actions, Cart & Mobile Toggle */}
           <div className="flex items-center gap-4 sm:gap-6">
             
-            {/* Cart Icon with Dynamic Badge */}
-            <div className="relative cursor-pointer flex items-center justify-center p-2 hover:bg-gray-50 rounded-full transition-colors group">
+            {/* Cart Icon with Dynamic Badge (লিংক করা হয়েছে) */}
+            <a href="#products" className="relative cursor-pointer flex items-center justify-center p-2 hover:bg-gray-50 rounded-full transition-colors group">
               <img 
                 src="/assets/products/shopping-cart.png"
                 alt="Cart" 
@@ -41,14 +41,14 @@ const Navbar = ({ cartCount }) => {
                   {cartCount}
                 </span>
               )}
-            </div>
+            </a>
 
             {/* Desktop Buttons */}
             <div className="hidden sm:flex items-center gap-5">
               <a href="#" className="text-gray-600 font-medium hover:text-[#4F39F6] transition-colors">Login</a>
-              <button className="bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 text-white px-7 py-2.5 rounded-full font-semibold transition-all shadow-md shadow-indigo-200">
+              <a href="#pricing" className="bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 text-white px-7 py-2.5 rounded-full font-semibold transition-all shadow-md shadow-indigo-200">
                 Get Started
-              </button>
+              </a>
             </div>
 
             {/* Mobile Hamburger Toggle Button */}
@@ -71,24 +71,23 @@ const Navbar = ({ cartCount }) => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 shadow-xl absolute w-full left-0 z-50">
           <div className="flex flex-col space-y-1">
-            <a href="#" className="block px-3 py-3 rounded-md text-base font-semibold text-[#4F39F6] bg-indigo-50">Products</a>
-            <a href="#" className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Features</a>
-            <a href="#" className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Pricing</a>
-            <a href="#" className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Testimonials</a>
-            <a href="#" className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">FAQ</a>
+            <a href="#products" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-semibold text-[#4F39F6] bg-indigo-50">Products</a>
+            <a href="#features" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Features</a>
+            <a href="#pricing" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Pricing</a>
+            <a href="#testimonials" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">Testimonials</a>
+            <a href="#faq" onClick={() => setIsOpen(false)} className="block px-3 py-3 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">FAQ</a>
           </div>
           
           <div className="pt-5 mt-3 border-t border-gray-100 flex flex-col gap-3 sm:hidden">
             <button className="w-full bg-white border border-gray-200 text-gray-900 px-5 py-3 rounded-full font-bold">
               Login
             </button>
-            <button className="w-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white px-5 py-3 rounded-full font-bold shadow-lg shadow-indigo-200">
+            <a href="#pricing" onClick={() => setIsOpen(false)} className="w-full text-center bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white px-5 py-3 rounded-full font-bold shadow-lg shadow-indigo-200">
               Get Started
-            </button>
+            </a>
           </div>
         </div>
       )}

@@ -6,7 +6,7 @@ const ShopSection = ({ cartItems, setCartItems }) => {
 
   const products = [
     { id: 1, name: 'AI Writing Pro', price: 29, period: '/Mo', description: 'Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.', features: ['Unlimited AI generations', '50+ writing templates', 'Grammar checker'], badge: 'Best Seller', badgeColor: 'bg-purple-100 text-purple-700', image: '/assets/products/resume-writing.png' },
-    { id: 2, name: 'Design Templates Pack', price: 49, period: '/One-Time', description: '2000+ premium templates for social media, presentations, and marketing materials.', features: ['2000+ templates', 'Monthly updates', 'Commercial license'], badge: 'Popular', badgeColor: 'bg-blue-100 text-blue-700', image: 'git commit -m "Fixed asset paths by moving to public folder for Netlify deployment"/assets/products/design-tool.png' },
+    { id: 2, name: 'Design Templates Pack', price: 49, period: '/One-Time', description: '2000+ premium templates for social media, presentations, and marketing materials.', features: ['2000+ templates', 'Monthly updates', 'Commercial license'], badge: 'Popular', badgeColor: 'bg-blue-100 text-blue-700', image: '/assets/products/design-tool.png' },
     { id: 3, name: 'Premium Stock Assets', price: 19, period: '/Mo', description: 'Access millions of royalty-free photos, videos, and graphics for your projects.', features: ['10M+ assets', 'Commercial use', 'No attribution'], badge: 'New', badgeColor: 'bg-green-100 text-green-700', image: 'fontawesome' },
     { id: 4, name: 'Automation Toolkit', price: 79, period: '/Mo', description: 'Automate repetitive tasks and streamline your workflow with powerful tools.', features: ['50+ automations', 'API access', 'Custom workflows'], badge: 'New', badgeColor: 'bg-green-100 text-green-700', image: '/assets/products/operation.png' },
     { id: 5, name: 'Resume Builder Pro', price: 15, period: '/One-Time', description: 'Create professional resumes and cover letters that land interviews.', features: ['100+ templates', 'ATS optimization', 'Export to PDF'], badge: 'Best Seller', badgeColor: 'bg-purple-100 text-purple-700', image: '/assets/products/portfolio.png' },
@@ -20,21 +20,20 @@ const ShopSection = ({ cartItems, setCartItems }) => {
       toast.warning("This product is already in your cart! 🛒");
     } else {
       setCartItems([...cartItems, product]);
-      toast.success(`${product.name} added to cart! 🎉`); // সাকসেস টোস্ট
+      toast.success(`${product.name} added to cart! 🎉`);
     }
   };
 
-  // Cart থেকে ডিলিট করার ফাংশন (Toast সহ)
   const handleRemove = (id) => {
     const remainingCart = cartItems.filter((item) => item.id !== id);
     setCartItems(remainingCart);
-    toast.error("Item removed from cart! 🗑️"); // রিমুভ টোস্ট
+    toast.error("Item removed from cart! 🗑️");
   };
 
-  // Checkout ফাংশন
   const handleCheckout = () => {
     if(cartItems.length > 0) {
-      toast.info("Proceeding to Checkout... 🚀");
+      toast.success("Order Placed Successfully! 🚀");
+      setCartItems([]);
     } else {
       toast.error("Your cart is empty!");
     }
@@ -69,7 +68,6 @@ const ShopSection = ({ cartItems, setCartItems }) => {
         {activeTab === 'products' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => {
-              // চেক করা হচ্ছে প্রোডাক্টটি কার্টে আছে কিনা
               const isAdded = cartItems.some(item => item.id === product.id);
 
               return (
@@ -102,7 +100,6 @@ const ShopSection = ({ cartItems, setCartItems }) => {
                     ))}
                   </ul>
 
-                  {/* Dynamic Buy Button */}
                   <button 
                     onClick={() => handleAddToCart(product)}
                     disabled={isAdded}

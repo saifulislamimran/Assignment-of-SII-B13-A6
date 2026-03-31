@@ -30,12 +30,20 @@ const Header = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <button className="w-full sm:w-auto bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl shadow-indigo-200 transition-all active:scale-95">
-                Explore Products
-              </button>
               
-              {/* Watch Demo with Play.png icon */}
-              <button className="w-full sm:w-auto bg-white border-2 border-gray-100 hover:border-gray-200 text-gray-700 px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-95">
+              {/* Explore Products Button (Linked to #products) */}
+              <a 
+                href="#products" 
+                className="w-full sm:w-auto text-center bg-gradient-to-r from-[#4F39F6] to-[#9514FA] hover:opacity-90 text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl shadow-indigo-200 transition-all active:scale-95"
+              >
+                Explore Products
+              </a>
+              
+              {/* Watch Demo with Play.png icon (Linked to #features) */}
+              <a 
+                href="#features" 
+                className="w-full sm:w-auto bg-white border-2 border-gray-100 hover:border-gray-200 text-gray-700 px-8 py-4 rounded-full font-bold text-lg flex items-center justify-center gap-3 transition-all active:scale-95"
+              >
                 <img 
                   src="/assets/Play.png"
                   alt="Play" 
@@ -43,7 +51,8 @@ const Header = () => {
                   onError={(e) => { e.target.onerror = null; e.target.src = "https://cdn-icons-png.flaticon.com/512/0/375.png" }} 
                 />
                 Watch Demo
-              </button>
+              </a>
+              
             </div>
           </div>
 

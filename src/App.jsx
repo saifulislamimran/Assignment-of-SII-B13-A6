@@ -19,14 +19,29 @@ function App() {
       
       <main>
         <Header />
-        <SocialProof />
-        <ShopSection cartItems={cartItems} setCartItems={setCartItems} />
-        <HowItWorks />
-        <Pricing />
-        <CtaSection />
+
+        <div id="testimonials">
+          <SocialProof />
+        </div>
+        
+        <div id="products">
+          <ShopSection cartItems={cartItems} setCartItems={setCartItems} />
+        </div>
+        
+        <div id="features">
+          <HowItWorks />
+        </div>
+        
+        <div id="pricing">
+          <Pricing />
+        </div>
+        
+        <div id="faq">
+          <CtaSection />
+        </div>
       </main>
       <Footer />
-
+      
       <ToastContainer position="bottom-right" autoClose={2000} />
     </div>
   );
