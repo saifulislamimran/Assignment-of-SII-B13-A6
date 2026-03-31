@@ -6,6 +6,7 @@ import ShopSection from './components/ShopSection';
 import HowItWorks from './components/HowItWorks';
 import Pricing from './components/Pricing';
 import CtaSection from './components/CtaSection';
+import Footer from './components/Footer';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,7 +25,8 @@ function App() {
         <Pricing />
         <CtaSection />
       </main>
-      
+      <Footer />
+
       <ToastContainer position="bottom-right" autoClose={2000} />
     </div>
   );

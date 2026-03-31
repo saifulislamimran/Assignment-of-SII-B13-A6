@@ -30,7 +30,7 @@ const Navbar = ({ cartCount }) => {
             {/* Cart Icon with Dynamic Badge */}
             <div className="relative cursor-pointer flex items-center justify-center p-2 hover:bg-gray-50 rounded-full transition-colors group">
               <img 
-                src="/src/assets/products/shopping-cart.png" 
+                src="/assets/products/shopping-cart.png"
                 alt="Cart" 
                 className="w-[15px] h-[15px] opacity-80 group-hover:opacity-100 transition-opacity"
                 onError={(e) => { e.target.onerror = null; e.target.src = "https://cdn-icons-png.flaticon.com/512/1170/1170678.png" }}
